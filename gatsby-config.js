@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "localhost:8000",
     title: "contentful-test",
   },
   plugins: [
