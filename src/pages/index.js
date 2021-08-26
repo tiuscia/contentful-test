@@ -76,7 +76,7 @@ const IndexPage = ({
       <h1 style={headingStyles}>
         Congratulations 
         <br />
-        <span style={headingAccentStyles}>— we're testing contenteful! </span>
+        <span style={headingAccentStyles}>— we're testing contenteful! DEV BRANCH</span>
         <span role="img" aria-label="Party popper emojis">
           🎉🎉🎉
         </span>
