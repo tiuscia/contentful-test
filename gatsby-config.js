@@ -7,13 +7,12 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "Iw4TWDMpO9EBEDWTG5zGYqJn-JaL7vj7okXIXIMdeKE",
         spaceId: "az01v73g2qzq",
+        accessToken: "yagd-st0lw7ZF48iFrIQhHKyc_9t2zy7WyDgDqp_v4U",
+        environment: "dev-id",
       },
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
   ],
 };
