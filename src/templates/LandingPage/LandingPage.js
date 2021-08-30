@@ -3,17 +3,17 @@ import { graphql } from "gatsby"
 
 const LandingPage = ({
   data: {
-    contentfulLandingPage: {
+    contentfulBlogPost: {
       slug,
       description : { description },
-      name,
+      title,
     },
   },
 }) => {
 
   return (
     <>
-    <h1>name: {name}</h1>
+    <h1>title: {title}</h1>
     <p>{description && description}</p>
     <span>{slug}</span>
     </>
@@ -22,10 +22,10 @@ const LandingPage = ({
 
 export const templateQuery = graphql`
   query LandingPageQuery($id: String!) {
-    contentfulLandingPage(id: { eq: $id }) {
+    contentfulBlogPost (id: { eq: $id }) {
       id
       slug
-      name
+      title
       description { description }
     }
   }

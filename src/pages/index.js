@@ -64,11 +64,11 @@ const links = [
 // markup
 const IndexPage = ({
   data: {
-    allContentfulLandingPage: { edges: pages },
+    allContentfulBlogPost: { edges: posts },
   },
 }) => {
 
-  const allPages = pages;
+  const allPosts = posts;
 
   return (
     <main style={pageStyles}>
@@ -101,13 +101,13 @@ const IndexPage = ({
 
       <p>All pages:</p> 
       <ul >
-        {allPages.map(page => (
-          <li key={page.node.slug} >
+        {allPosts.map(post => (
+          <li key={post.node.slug} >
             <span>
               <a
-                href={`${page.node.slug}`}
+                href={`${post.node.slug}`}
               >
-                {page.node.name}
+                {post.node.title}
               </a>
             </span>
           </li>
@@ -120,11 +120,11 @@ const IndexPage = ({
 
 export const pageQuery = graphql`
   query LandingPageIndexQuery {
-    allContentfulLandingPage {
+    allContentfulBlogPost {
       edges {
         node {
           slug
-          name
+          title
         }
       }
     }
