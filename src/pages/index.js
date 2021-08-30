@@ -64,7 +64,7 @@ const links = [
 // markup
 const IndexPage = ({
   data: {
-    allContentfulLandingPage: { edges: pages },
+    allContentfulBlogPost: { edges: pages },
   },
 }) => {
 
@@ -107,7 +107,7 @@ const IndexPage = ({
               <a
                 href={`${page.node.slug}`}
               >
-                {page.node.name}
+                {page.node.title}
               </a>
             </span>
           </li>
@@ -120,11 +120,11 @@ const IndexPage = ({
 
 export const pageQuery = graphql`
   query LandingPageIndexQuery {
-    allContentfulLandingPage {
+    allContentfulBlogPost {
       edges {
         node {
           slug
-          name
+          title
         }
       }
     }

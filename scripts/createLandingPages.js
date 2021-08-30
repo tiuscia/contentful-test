@@ -11,7 +11,7 @@ const createLandingPagePages = async (graphql, actions) => {
 
   const LandingPagesResult = await graphql(`
     query LandingPagesResult {
-      allContentfulLandingPage {
+      allContentfulBlogPost {
         edges {
           node {
             id
@@ -26,7 +26,7 @@ const createLandingPagePages = async (graphql, actions) => {
     throw LandingPagesResult.errors
   }
 
-  const LandingPages = LandingPagesResult.data.allContentfulLandingPage.edges
+  const LandingPages = LandingPagesResult.data.allContentfulBlogPost.edges
 
   await Promise.all(LandingPages.map(async LandingPage => {
     createPage({
