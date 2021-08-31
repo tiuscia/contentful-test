@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     siteUrl: "localhost:8000",
@@ -7,7 +11,7 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "Ndl8vpBv5_xwF_F91z2OQO5yEoXndPx7JXwdIAU5tCU",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         spaceId: "ymbj0emwqrfq",
       },
     },
