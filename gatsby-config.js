@@ -13,8 +13,7 @@ module.exports = {
       options: {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        environment: process.env.ENVIRONMENT,
-        host: 'preview.contentful.com'
+        environment: process.env.ENVIRONMENT
       },
     },
     "gatsby-plugin-styled-components",
