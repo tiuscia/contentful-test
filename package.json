@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
+    "prestart": "node setup.js",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
