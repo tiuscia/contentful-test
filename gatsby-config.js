@@ -11,10 +11,10 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         environment: process.env.ENVIRONMENT,
-        host: 'preview-contentfultestmain.gtsb.io',
+        host: 'preview.contentful.com',
       },
     },
     "gatsby-plugin-styled-components",
