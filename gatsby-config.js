@@ -1,8 +1,4 @@
-let env = process.env.NODE_ENV || 'development';
-
-require("dotenv").config({
-  path: `.env.${env}`,
-})
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
 module.exports = {
   siteMetadata: {
@@ -13,13 +9,13 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: process.env.NODE_ENV === 'development' ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN : process.env.CONTENTFUL_ACCESS_TOKEN,
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        environment: process.env.ENVIRONMENT,
-        host: process.env.CONTENTFUL_HOST,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host:process.env.CONTENTFUL_HOST,
       },
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
   ],
+
 };
